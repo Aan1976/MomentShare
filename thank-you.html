@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Application Received | momentshare.lu</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');
+
+:root{
+--navy:#071827;
+--cream:#f7f3ec;
+--gold:#b89b5e;
+--text:#1f252b;
+}
+
+*{box-sizing:border-box;}
+
+body{
+margin:0;
+font-family:Inter,sans-serif;
+background:var(--cream);
+color:var(--text);
+}
+
+/* HERO */
+
+.hero{
+min-height:70vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:60px 30px;
+
+background:
+linear-gradient(rgba(7,24,39,.85), rgba(7,24,39,.9)),
+url("luxembourg-evening.jpg");
+
+background-size:cover;
+background-position:center;
+
+color:white;
+}
+
+.hero-content{
+max-width:750px;
+}
+
+.badge{
+display:inline-block;
+padding:8px 20px;
+border:1px solid var(--gold);
+color:var(--gold);
+border-radius:30px;
+font-size:12px;
+letter-spacing:2px;
+margin-bottom:25px;
+}
+
+h1{
+font-family:"Cormorant Garamond",serif;
+font-size:60px;
+font-weight:500;
+margin:0 0 15px;
+}
+
+p{
+font-size:20px;
+line-height:1.7;
+font-weight:300;
+}
+
+/* SECTION */
+
+section{
+max-width:900px;
+margin:auto;
+padding:80px 30px;
+}
+
+h2{
+font-family:"Cormorant Garamond",serif;
+font-size:42px;
+text-align:center;
+font-weight:500;
+}
+
+/* CARDS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+.card h3{
+font-family:"Cormorant Garamond",serif;
+font-size:28px;
+margin-top:0;
+}
+
+.note{
+text-align:center;
+max-width:700px;
+margin:20px auto;
+color:#555;
+line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+color:#999;
+font-size:14px;
+}
+
+.button{
+display:inline-block;
+margin-top:30px;
+padding:14px 35px;
+background:var(--navy);
+color:white;
+text-decoration:none;
+border-radius:40px;
+}
+
+.center{
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<div class="hero-content">
+
+<div class="badge">APPLICATION RECEIVED</div>
+
+<h1>Thank you for applying</h1>
+
+<p>
+We’ve received your application for the MomentShare Founding Circle in Luxembourg.
+Every application is reviewed personally by our team.
+</p>
+
+<a class="button" href="index.html">
+Back to homepage
+</a>
+
+</div>
+
+</div>
+
+<section>
+
+<h2>What happens next</h2>
+
+<p class="note">
+We carefully review each application to ensure alignment with the MomentShare philosophy:
+presence, curiosity, and respect for meaningful conversation.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>1 — Review</h3>
+<p>
+Your application is read manually. We look at communication style and motivation, not just background.
+</p>
+</div>
+
+<div class="card">
+<h3>2 — Selection</h3>
+<p>
+If selected, you will be invited to a short private conversation with our team.
+</p>
+</div>
+
+<div class="card">
+<h3>3 — Onboarding</h3>
+<p>
+Approved companions join the Founding Circle and receive onboarding details.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Our philosophy</h2>
+
+<p class="note">
+MomentShare is not a gig platform.
+It is a curated circle of people who value meaningful human connection in Luxembourg.
+
+Selection is intentionally limited to maintain quality and trust.
+</p>
+
+</section>
+
+<section class="center">
+
+<p class="note">
+You will hear from us within a few days.
+No need to follow up — every application is reviewed.
+</p>
+
+<a class="button" href="charter.html">Read the MomentShare Charter</a>
+
+</section>
+
+<footer>
+momentshare.lu · Founding Circle · Luxembourg
+</footer>
+
+</body>
+
+</html>
