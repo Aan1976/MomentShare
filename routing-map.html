@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Routing Map - Funnel Architecture</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #0b0b0f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 50px 20px 20px;
+      text-align: center;
+      border-bottom: 1px solid #222235;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    header p {
+      color: #b5b5b5;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .box {
+      background: #141420;
+      border: 1px solid #222235;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .title {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #4cd964;
+    }
+
+    .flow {
+      font-family: monospace;
+      font-size: 13px;
+      white-space: pre-wrap;
+      color: #cfcfcf;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #888;
+      margin-top: 6px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 8px;
+      font-size: 11px;
+      border-radius: 20px;
+      background: #1f1f2e;
+      border: 1px solid #2a2a40;
+      color: #4cd964;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 11px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Funnel Routing Map</h1>
+  <p>Internal architecture — defines how users move through the system</p>
+</header>
+
+<div class="container">
+
+  <div class="box">
+    <div class="tag">ENTRY POINT</div>
+    <div class="title">Traffic Entry Logic</div>
+    <div class="flow">
+index.html
+  ├── Cold user → waitlist.html
+  └── Warm user → how-it-works.html
+    </div>
+    <div class="note">Goal: immediately segment intent (low vs high commitment)</div>
+  </div>
+
+  <div class="box">
+    <div class="tag">COLD FUNNEL</div>
+    <div class="title">Waitlist Flow</div>
+    <div class="flow">
+waitlist.html
+  ↓
+waitlist-companion.html
+  ↓
+thank-you-guest.html
+  ↓
+apply.html
+    </div>
+    <div class="note">Goal: convert low-intent users into application flow</div>
+  </div>
+
+  <div class="box">
+    <div class="tag">WARM FUNNEL</div>
+    <div class="title">Education + Trust Flow</div>
+    <div class="flow">
+how-it-works.html
+  ↓
+faq.html
+  ↓
+apply.html
+  ↓
+thank-you.html
+    </div>
+    <div class="note">Goal: remove doubt → increase trust → drive application</div>
+  </div>
+
+  <div class="box">
+    <div class="tag">SOCIAL PROOF LAYER</div>
+    <div class="title">Companions System</div>
+    <div class="flow">
+companions.html
+  ↓
+companion-profile.html
+  ↓
+apply.html / waitlist.html
+    </div>
+    <div class="note">Goal: create desirability + FOMO effect</div>
+  </div>
+
+  <div class="box">
+    <div class="tag">EXCLUSIVE LAYER</div>
+    <div class="title">High Scarcity Entry</div>
+    <div class="flow">
+founding-circle.html
+  ↓
+apply.html (priority review)
+    </div>
+    <div class="note">Goal: premium positioning + urgency</div>
+  </div>
+
+  <div class="box">
+    <div class="tag">GLOBAL RULE</div>
+    <div class="title">CTA Standardization</div>
+    <div class="flow">
+PRIMARY CTA   → Apply Now
+SECONDARY CTA → Join Waitlist
+INFO CTA      → How It Works
+    </div>
+    <div class="note">No other CTA variants allowed (prevents funnel leakage)</div>
+  </div>
+
+  <div class="box">
+    <div class="tag">SYSTEM GOAL</div>
+    <div class="title">Conversion Objective</div>
+    <div class="flow">
+Traffic → Trust → Application → Approval → Membership
+    </div>
+    <div class="note">Every page must serve ONE role in this chain</div>
+  </div>
+
+</div>
+
+<footer>
+  Internal document — Funnel architecture v1.0
+</footer>
+
+</body>
+</html>
