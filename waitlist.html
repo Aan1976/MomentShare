@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join the Waitlist</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #0b0b0f;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 520px;
+      background: #141420;
+      border: 1px solid #222235;
+      border-radius: 14px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #b5b5b5;
+      font-size: 14px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      font-size: 12px;
+      background: #1f1f2e;
+      border: 1px solid #2a2a40;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      color: #4cd964;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    input {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #2a2a40;
+      background: #0f0f18;
+      color: white;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #4cd964;
+    }
+
+    button {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: #4cd964;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .small {
+      font-size: 12px;
+      color: #777;
+      margin-top: 15px;
+    }
+
+    .features {
+      text-align: left;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #cfcfcf;
+    }
+
+    .features li {
+      margin-bottom: 6px;
+    }
+
+    .footer {
+      margin-top: 18px;
+      font-size: 11px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="badge">Private Access • Limited Spots</div>
+
+    <h1>Join the Waitlist</h1>
+
+    <p>
+      Be among the first to access a private, curated membership network
+      built for verified connections only.
+    </p>
+
+    <form action="/api/waitlist" method="POST">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Email address" required />
+      <button type="submit">Request Access</button>
+    </form>
+
+    <div class="features">
+      <ul>
+        <li>✔ No public profiles</li>
+        <li>✔ Verified members only</li>
+        <li>✔ Curated introductions</li>
+        <li>✔ High-trust private network</li>
+      </ul>
+    </div>
+
+    <div class="small">
+      You will only be contacted when your application is reviewed.
+    </div>
+
+    <div class="footer">
+      We respect your privacy. No spam.
+    </div>
+
+  </div>
+
+</body>
+</html>
